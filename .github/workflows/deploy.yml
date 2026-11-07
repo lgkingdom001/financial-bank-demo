@@ -34,7 +34,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      -       - name: Verify dist output
+      - name: Build
+        run: npm run build
+
+      - name: Verify dist output
         run: |
           echo "=== DIST FILES ==="
           find dist -type f
